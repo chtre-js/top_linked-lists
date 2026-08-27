@@ -50,3 +50,14 @@ test("prepend a value to a list changes the head and link to the former head", (
   expect(linkedList.headValue).toEqual(800);
   expect(linkedList._head.nextNode.value).toEqual(100);
 })
+
+test("prepend a value to a list increment the size", () => {
+  const linkedList = new LinkedList;
+  linkedList.append(100);
+  linkedList.append(200);
+  linkedList.append(300);
+  
+  linkedList.prepend(800);
+
+  expect(linkedList.size).toEqual(4);
+})
