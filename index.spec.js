@@ -5,5 +5,5 @@ test("append a value to an empty list change the head", () => {
 
   linkedList.append(800);
 
-  expect(linkedList._head.value).toEqual(800);
+  expect(linkedList.headValue).toEqual(800);
 })
