@@ -1,0 +1,26 @@
+{
+  "name": "top_linked-lists",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/chtre-js/top_linked-lists#readme",
+  "bugs": {
+    "url": "https://github.com/chtre-js/top_linked-lists/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chtre-js/top_linked-lists.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "jest": "^30.4.2"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.29.7"
+  }
+}
