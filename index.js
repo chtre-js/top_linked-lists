@@ -2,7 +2,7 @@ class LinkedList {
   constructor() {
     this._head = null;
     this._tail = null;
-    this._length = 0;
+    this._size = 0;
   }
 
   get headValue() {
@@ -13,8 +13,8 @@ class LinkedList {
     return this._tail.value;
   }
 
-  get listLength() {
-    return this._length;
+  get size() {
+    return this._size;
   }
 
   append(value) {
