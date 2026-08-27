@@ -39,7 +39,7 @@ test("prepend a value to an empy list adds a head", () => {
   expect(linkedList.headValue).toEqual(800);
 })
 
-test.skip("prepend a value to a list changes the head and link to the former head", () => {
+test("prepend a value to a list changes the head and link to the former head", () => {
   const linkedList = new LinkedList;
   linkedList.append(100);
   linkedList.append(200);
