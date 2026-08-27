@@ -115,3 +115,15 @@ test("pop() returns the head on an one-element list", () => {
 
   expect(linkedList.pop()).toEqual({value: 800, nextNode: null});
 })
+
+test("pop() reassign the head on multi-element lists", () => {
+  const linkedList = new LinkedList;
+  linkedList.append(100);
+  linkedList.append(200);
+  linkedList.append(300);
+  linkedList.append(400);
+  linkedList.append(500);
+
+  linkedList.pop();
+  expect(linkedList.head.value).toEqual(200);
+})
