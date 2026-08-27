@@ -157,3 +157,14 @@ test("contains(value) return false when value not found", () => {
 
   expect(linkedList.contains(800)).toBe(false);
 })
+
+test("findIndex() returns the index of the value when found", () => {
+  const linkedList = new LinkedList;
+  linkedList.append(100);
+  linkedList.append(200);
+  linkedList.append(300);
+  linkedList.append(400);
+  linkedList.append(500);
+
+  expect(linkedList.findIndex(400)).toEqual(3);
+})
