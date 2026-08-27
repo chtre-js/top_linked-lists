@@ -75,6 +75,19 @@ class LinkedList {
     return true;
   }
 
+  findIndex(value) {
+    let current = this._head;
+    let index = 0;
+    while (current.value != value) {
+      if (!current.nextNode) {
+        return -1;
+      }
+      current = current.nextNode;
+      index++;
+    }
+    return index;
+  }
+
   #reinitializeHead() {
     this._head = new Node(null);
   }
