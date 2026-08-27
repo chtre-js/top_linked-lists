@@ -168,3 +168,15 @@ test("findIndex() returns the index of the value when found", () => {
 
   expect(linkedList.findIndex(400)).toEqual(3);
 })
+
+test("findIndex() returns -1 when value is not found", () => {
+  const linkedList = new LinkedList;
+  linkedList.append(100);
+  linkedList.append(200);
+  linkedList.append(300);
+  linkedList.append(400);
+  linkedList.append(500);
+  
+  expect(linkedList.findIndex(800)).toEqual(-1);
+
+})
