@@ -135,3 +135,25 @@ test("pop() returns the current head", () => {
 
   expect(linkedList.pop()).toEqual({value: 800, nextNode: {value: 700, nextNode: null}});
 })
+
+test("contains(value) return true when value found", () => {
+  const linkedList = new LinkedList;
+  linkedList.append(100);
+  linkedList.append(200);
+  linkedList.append(300);
+  linkedList.append(400);
+  linkedList.append(500);
+
+  expect(linkedList.contains(500)).toBe(true);
+})
+
+test("contains(value) return false when value not found", () => {
+  const linkedList = new LinkedList;
+  linkedList.append(100);
+  linkedList.append(200);
+  linkedList.append(300);
+  linkedList.append(400);
+  linkedList.append(500);
+
+  expect(linkedList.contains(800)).toBe(false);
+})
