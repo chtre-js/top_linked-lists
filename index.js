@@ -4,6 +4,18 @@ class LinkedList {
     this._tail = null;
     this._length = 0;
   }
+  
+  get headValue() {
+    return this._head.value;
+  }
+
+  get tailValue() {
+    return this._tail.value;
+  }
+
+  get listLength() {
+    return this._length;
+  }
 
   append(value) {
     const node = new Node(value);
