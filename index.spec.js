@@ -102,3 +102,9 @@ test("at(4) returns the 4th node", () => {
 
   expect(linkedList.at(4)).toEqual({value: 400, nextNode: {value: 500, nextNode: null}});
 })
+
+test("pop() retruns undefined when used on an empty list", () => {
+  const linkedList = new LinkedList;
+
+  expect(linkedList.pop()).toBe(undefined);
+})
