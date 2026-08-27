@@ -53,14 +53,15 @@ class LinkedList {
   }
 
   pop() {
+    const currentHead = this._head;
     if (this._size === 0) {
       return undefined;
     } else if (this._size === 1) {
-      const currentHead = this._head;
       this.#reinitializeHead();
-      
-      return currentHead;
+    } else {
+        this._head = currentHead.nextNode;
     }
+    return currentHead;
   }
 
   #reinitializeHead() {
