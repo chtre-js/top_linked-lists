@@ -9,8 +9,8 @@ class LinkedList {
     return !this._head ? undefined : this._head;
   }
 
-  get tailValue() {
-    return this._tail.value;
+  get tail() {
+    return !this._tail ? undefined : this._tail;
   }
 
   get size() {
