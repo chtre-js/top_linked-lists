@@ -29,7 +29,7 @@ class LinkedList {
       this._tail.nextNode = node;
       this._tail = node;
     }
-    this._length++;
+    this._size++;
   }
 
   prepend(value) {
