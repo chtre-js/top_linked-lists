@@ -51,6 +51,12 @@ class LinkedList {
     }
     return current;
   }
+
+  pop() {
+    if (this._size === 0) {
+      return undefined;
+    }
+  }
 }
 
 class Node {
