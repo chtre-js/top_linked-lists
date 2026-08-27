@@ -22,12 +22,11 @@ class LinkedList {
 
     if (!this._head) {
       this._head = node;
-      this._length++;
     } else {
       this._tail.nextNode = node;
       this._tail = node;
-      this._length++;
     }
+    this._length++;
   }
 }
 
