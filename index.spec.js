@@ -186,3 +186,14 @@ test("toString returns an empty string for an empty list", () => {
 
   expect(linkedList.toString()).toEqual("");
 })
+
+test("toString returns a correct string for a full list", () => {
+  const linkedList = new LinkedList;
+  linkedList.append(100);
+  linkedList.append(200);
+  linkedList.append(300);
+  linkedList.append(400);
+  linkedList.append(500);
+  
+  expect(linkedList.toString()).toEqual("( 100 ) -> ( 200 ) -> ( 300 ) -> ( 400 ) -> ( 500 ) -> null");
+})
