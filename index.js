@@ -55,7 +55,16 @@ class LinkedList {
   pop() {
     if (this._size === 0) {
       return undefined;
+    } else if (this._size === 1) {
+      const currentHead = this._head;
+      this.#reinitializeHead();
+      
+      return currentHead;
     }
+  }
+
+  #reinitializeHead() {
+    this._head = new Node(null);
   }
 }
 
