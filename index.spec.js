@@ -67,3 +67,12 @@ test("head() returns undefined if there is no head", () => {
 
   expect(linkedList.head).toBe(undefined);
 })
+
+test("head() returns the head for a full list", () => {
+  const linkedList = new LinkedList;
+  linkedList.append(800);
+  linkedList.append(7400);
+  linkedList.append(500);
+
+  expect(linkedList.head).toEqual({value: 800, nextNode: {value: 7400, nextNode: {value: 500, nextNode: null}}});
+})
