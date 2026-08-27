@@ -94,15 +94,12 @@ class LinkedList {
     if (this._size === 0) {
       return string;
     }
-    while (current.nextNode) {
-      if (!current.nextNode) {
-        string + "null";
-      }
-      string + `( ${current.value} ) -> `;
+    while (current) {
+      string += `( ${current.value} ) -> `;
       current = current.nextNode;
     }
     
-    return string;
+    return string + "null";
   }
 
   #reinitializeHead() {
