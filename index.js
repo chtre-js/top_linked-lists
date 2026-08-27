@@ -43,6 +43,14 @@ class LinkedList {
     }
     this._size++;
   }
+
+  at(index) {
+    let current = this._head;
+    for (let i = 0; i < index - 1; i++) {
+      current = current.nextNode;
+    }
+    return current;
+  }
 }
 
 class Node {
