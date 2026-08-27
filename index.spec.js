@@ -180,3 +180,9 @@ test("findIndex() returns -1 when value is not found", () => {
   expect(linkedList.findIndex(800)).toEqual(-1);
 
 })
+
+test("toString returns an empty string for an empty list", () => {
+  const linkedList = new LinkedList;
+
+  expect(linkedList.toString()).toEqual("");
+})
