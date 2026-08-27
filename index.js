@@ -4,7 +4,7 @@ class LinkedList {
     this._tail = null;
     this._length = 0;
   }
-  
+
   get headValue() {
     return this._head.value;
   }
