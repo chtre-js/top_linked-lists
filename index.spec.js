@@ -20,7 +20,7 @@ test("append several values update the tail", () => {
   linkedList.append(600);
   linkedList.append(500);
 
-  expect(linkedList.tailValue).toEqual(500);
+  expect(linkedList.tail.value).toEqual(500);
 })
 
 test("append several values update the size accordingly", () => {
@@ -48,7 +48,7 @@ test("prepend a value to a list changes the head and link to the former head", (
   linkedList.prepend(800);
 
   expect(linkedList.head.value).toEqual(800);
-  expect(linkedList._head.nextNode.value).toEqual(100);
+  expect(linkedList.head.nextNode.value).toEqual(100);
 })
 
 test("prepend a value to a list increment the size", () => {
@@ -75,4 +75,19 @@ test("head() returns the head for a full list", () => {
   linkedList.append(500);
 
   expect(linkedList.head).toEqual({value: 800, nextNode: {value: 7400, nextNode: {value: 500, nextNode: null}}});
+})
+
+test("tail() returns undefined if the list is empty", () => {
+  const linkedList = new LinkedList;
+
+  expect(linkedList.tail).toBe(undefined);
+})
+
+test("tail() returns the correct node for a full list", () => {
+  const linkedList = new LinkedList;
+  linkedList.append(800);
+  linkedList.append(500);
+  linkedList.append(400);
+
+  expect(linkedList.tail).toEqual({value: 400, nextNode: null});
 })
