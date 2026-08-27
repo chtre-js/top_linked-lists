@@ -4,7 +4,7 @@ test("append a value to an empty list change the head", () => {
   const linkedList = new LinkedList();
   linkedList.append(800);
 
-  expect(linkedList.headValue).toEqual(800);
+  expect(linkedList.head.value).toEqual(800);
 });
 
 test("append a value to an empty list increment the length to 1", () => {
@@ -36,7 +36,7 @@ test("prepend a value to an empy list adds a head", () => {
   const linkedList = new LinkedList();
   linkedList.prepend(800);
 
-  expect(linkedList.headValue).toEqual(800);
+  expect(linkedList.head.value).toEqual(800);
 })
 
 test("prepend a value to a list changes the head and link to the former head", () => {
@@ -47,7 +47,7 @@ test("prepend a value to a list changes the head and link to the former head", (
   
   linkedList.prepend(800);
 
-  expect(linkedList.headValue).toEqual(800);
+  expect(linkedList.head.value).toEqual(800);
   expect(linkedList._head.nextNode.value).toEqual(100);
 })
 
@@ -60,4 +60,10 @@ test("prepend a value to a list increment the size", () => {
   linkedList.prepend(800);
 
   expect(linkedList.size).toEqual(4);
+})
+
+test("head() returns undefined if there is no head", () => {
+  const linkedList = new LinkedList;
+
+  expect(linkedList.head).toBe(undefined);
 })

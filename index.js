@@ -5,8 +5,8 @@ class LinkedList {
     this._size = 0;
   }
 
-  get headValue() {
-    return this._head.value;
+  get head() {
+    return !this._head ? undefined : this._head;
   }
 
   get tailValue() {
