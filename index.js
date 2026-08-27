@@ -22,6 +22,9 @@ class LinkedList {
 
     if (!this._head) {
       this._head = node;
+    } else  if (this._head && !this._tail){
+      this._head.nextNode = node;
+      this._tail = node;
     } else {
       this._tail.nextNode = node;
       this._tail = node;
