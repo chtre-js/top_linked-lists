@@ -88,6 +88,23 @@ class LinkedList {
     return index;
   }
 
+  toString() {
+    let string = "";
+    let current = this._head;
+    if (this._size === 0) {
+      return string;
+    }
+    while (current.nextNode) {
+      if (!current.nextNode) {
+        string + "null";
+      }
+      string + `( ${current.value} ) -> `;
+      current = current.nextNode;
+    }
+    
+    return string;
+  }
+
   #reinitializeHead() {
     this._head = new Node(null);
   }
