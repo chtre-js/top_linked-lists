@@ -91,3 +91,14 @@ test("tail() returns the correct node for a full list", () => {
 
   expect(linkedList.tail).toEqual({value: 400, nextNode: null});
 })
+
+test("at(4) returns the 4th node", () => {
+  const linkedList = new LinkedList;
+  linkedList.append(100);
+  linkedList.append(200);
+  linkedList.append(300);
+  linkedList.append(400);
+  linkedList.append(500);
+
+  expect(linkedList.at(4)).toEqual({value: 400, nextNode: {value: 500, nextNode: null}});
+})
