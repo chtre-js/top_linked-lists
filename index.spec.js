@@ -13,3 +13,10 @@ test("append a value to an empty list increment the length to 1", () => {
 
   expect(linkedList.listLength).toEqual(1);
 });
+
+test("prepend a value to an empy list adds a head", () => {
+  const linkedList = new LinkedList();
+  linkedList.prepend(800);
+
+  expect(linkedList.headValue).toEqual(800);
+})

@@ -28,6 +28,17 @@ class LinkedList {
     }
     this._length++;
   }
+
+  prepend(value) {
+    const node = new Node(value);
+
+    if (!this._tail) {
+      this._head = node;
+    } else {
+      node.nextNode = this._head;
+      this._head = node;
+    }
+  }
 }
 
 class Node {
